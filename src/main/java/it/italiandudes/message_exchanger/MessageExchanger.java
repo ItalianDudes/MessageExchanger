@@ -7,6 +7,7 @@ import it.italiandudes.message_exchanger.server.Server;
 import java.util.Arrays;
 import java.util.function.Predicate;
 
+@SuppressWarnings("unused")
 public final class MessageExchanger {
 
     //Main Method
@@ -86,9 +87,32 @@ public final class MessageExchanger {
             //Post-Launch Codes
         }
 
+        //Server Defs
+        public static final class Server {
+            public static final String SERVER_DIR = "server/";
+            public static final String CONFIG_FILE_PATH = SERVER_DIR+"server.cfg";
+            public static final String AUTH_USERS_PATH = SERVER_DIR+"authUsers.csv";
+            public static final int DEFAULT_PORT = 45800;
+
+            public static final class Commands {
+                public static final String STOP = "stop";
+                public static final String MESSAGE = "msg";
+                public static final String MESSAGE_SET = "set";
+                public static final String MESSAGE_GET = "get";
+                public static final String PORT = "port";
+                public static final String PORT_GET = "get";
+                public static final String PORT_SET = "set";
+                public static final String HELP = "help";
+                public static final String REGISTER = "register";
+                public static final String UNREGISTER = "unregister";
+            }
+        }
+
         //Protocol Strings
         public static final class Protocol {
-
+            public static final String PROTOCOL_AUTH = "auth";
+            public static final String PROTOCOL_GET = "get";
+            public static final String PROTOCOL_DISC = "disc";
         }
 
     }

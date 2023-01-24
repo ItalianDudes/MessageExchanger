@@ -1,15 +1,19 @@
 package it.italiandudes.message_exchanger.client;
 
+import it.italiandudes.idl.common.Peer;
 import it.italiandudes.message_exchanger.client.javafx.JFXDefs;
 import it.italiandudes.message_exchanger.client.javafx.scene.SceneStartup;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
+@SuppressWarnings("unused")
 public final class Client extends Application {
 
     //Attributes
-    private static Stage stage;
+    private static Stage stage = null;
+    private static Peer peer;
 
     //JavaFX Start
     @Override
@@ -36,6 +40,13 @@ public final class Client extends Application {
     @NotNull
     public static Stage getStage(){
         return stage;
+    }
+    @Nullable
+    public static Peer getPeer(){
+        return peer;
+    }
+    public static void setPeer(@Nullable Peer peer){
+        Client.peer = peer;
     }
 
 }
