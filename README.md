@@ -1,2 +1,2 @@
 # Easy Sheet
-A (hopefully) fast app to handle D&D sheets better
+A client/server app that allows clients to download a message from server.
