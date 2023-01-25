@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'it.italiandudes'
-version '1.0R'
+version '1.1R'
 
 repositories {
     mavenCentral()
@@ -42,4 +42,12 @@ task runServer(type: Exec) {
     standardInput = System.in
     description = "Run the mainClass as server from the output jar in classpath with ExecTask"
     commandLine "java", "-jar", jar.archiveFile.get(), "-server"
+}
+
+task runClientNoGui(type: Exec) {
+    dependsOn shadowJar
+    group = "Execution"
+    standardInput = System.in
+    description = "Run the mainClass as client in no-gui mode from the output jar in classpath with ExecTask"
+    commandLine "java", "-jar", jar.archiveFile.get(), "-nogui"
 }

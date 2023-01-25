@@ -21,7 +21,7 @@ public final class PeerList {
     }
     public static boolean addPeer(Peer newPeer){
         for(Peer peer : peerList){
-            if(peer.equals(newPeer)) return false;
+            if(peer.getCredential().equals(newPeer.getCredential())) return false;
         }
         return peerList.add(newPeer);
     }

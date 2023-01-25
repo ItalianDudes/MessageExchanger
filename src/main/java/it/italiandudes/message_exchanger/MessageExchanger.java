@@ -41,6 +41,8 @@ public final class MessageExchanger {
                 System.exit(Defs.ReturnCodes.LOGGER_INIT_ERROR);
         }
 
+        Thread.setDefaultUncaughtExceptionHandler((t, e) -> Logger.log(e));
+
         if(Arrays.stream(args).anyMatch(Predicate.isEqual(Defs.LaunchArgs.START_SERVER))){ //Start the server
             args = Arrays.stream(args).
                     filter(Predicate.isEqual(Defs.LaunchArgs.START_SERVER)).
@@ -85,6 +87,9 @@ public final class MessageExchanger {
             public static final int SERVER_START_FAIL = -81;
 
             //Post-Launch Codes
+            public static final int CLIENT_CONNECTION_ATTEMPT_FAIL = 91;
+            public static final int CLIENT_COM_FAIL = 107;
+            public static final int CLIENT_AUTH_FAIL = 185;
         }
 
         //Server Defs

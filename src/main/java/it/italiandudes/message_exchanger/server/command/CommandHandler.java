@@ -27,10 +27,10 @@ public final class CommandHandler {
                     if(splitCommand.length > 2) {
                         StringBuilder msgBuilder = new StringBuilder();
                         for(int i=2;i<splitCommand.length;i++){
-                            msgBuilder.append(splitCommand[i]);
+                            msgBuilder.append(splitCommand[i]).append(' ');
                         }
                         Logger.log("Message changed successfully");
-                        Server.setMessage(msgBuilder.toString());
+                        Server.setMessage(msgBuilder.substring(0,msgBuilder.toString().length()-1));
                     }else{
                         Logger.log("Command syntax error");
                     }

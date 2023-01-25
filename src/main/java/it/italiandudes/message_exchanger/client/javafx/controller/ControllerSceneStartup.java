@@ -13,7 +13,6 @@ import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import org.apache.commons.codec.digest.DigestUtils;
 
 public final class ControllerSceneStartup {
 
@@ -79,7 +78,7 @@ public final class ControllerSceneStartup {
                             return null;
                         }
 
-                        ClientAuthenticator authenticator = new ClientAuthenticator(new Credential(usernameField.getText(), DigestUtils.sha512Hex(passwordField.getText())), domain, port);
+                        ClientAuthenticator authenticator = new ClientAuthenticator(new Credential(usernameField.getText(), passwordField.getText()), domain, port);
 
                         if(authenticator.getException()!=null){
                             Platform.runLater(() -> {

@@ -1,6 +1,9 @@
 package it.italiandudes.message_exchanger.server.runnable;
 
-import it.italiandudes.idl.common.*;
+import it.italiandudes.idl.common.Credential;
+import it.italiandudes.idl.common.Logger;
+import it.italiandudes.idl.common.Peer;
+import it.italiandudes.idl.common.RawSerializer;
 import it.italiandudes.message_exchanger.MessageExchanger;
 import it.italiandudes.message_exchanger.server.list.AuthorizedUserList;
 import it.italiandudes.message_exchanger.server.list.PeerList;
@@ -39,7 +42,7 @@ public final class Authenticator extends Thread {
                         RawSerializer.sendBoolean(connection.getOutputStream(), false);
                     }
                 }else{
-                    Logger.log("["+connection.getInetAddress().getHostAddress()+":"+connection.getPort()+"] The username \""+credential.getUsername()+"\" is not authorized, the connection has been terminated.");
+                    Logger.log("["+connection.getInetAddress().getHostAddress()+":"+connection.getPort()+"] Username or password mismatch, the connection has been terminated.");
                     RawSerializer.sendBoolean(connection.getOutputStream(), false);
                     try {
                         connection.close();
@@ -54,6 +57,7 @@ public final class Authenticator extends Thread {
             }
 
         }catch (Exception e){
+            Logger.log(e);
             Logger.log("["+connection.getInetAddress().getHostAddress()+":"+connection.getPort()+"] An error has occurred, the connection has been terminated.");
             try {
                 connection.close();

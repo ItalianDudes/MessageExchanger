@@ -32,7 +32,9 @@ public final class AuthorizedUserList {
         return userList.remove(user);
     }
     public static boolean isAuthorized(Credential credential){
-        return getUser(credential.getUsername())!=null;
+        Credential userCredential = getUser(credential.getUsername());
+        if(userCredential == null) return false;
+        return userCredential.equals(credential);
     }
     public static Credential getUser(String username){
         for(Credential credential : userList){

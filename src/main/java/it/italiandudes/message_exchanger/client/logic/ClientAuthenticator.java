@@ -1,6 +1,7 @@
 package it.italiandudes.message_exchanger.client.logic;
 
 import it.italiandudes.idl.common.Credential;
+import it.italiandudes.idl.common.Logger;
 import it.italiandudes.idl.common.Peer;
 import it.italiandudes.idl.common.RawSerializer;
 import it.italiandudes.message_exchanger.MessageExchanger;
@@ -30,6 +31,7 @@ public final class ClientAuthenticator {
             return;
         }
         try {
+            Logger.log(credentials.toString());
             RawSerializer.sendString(socket.getOutputStream(), MessageExchanger.Defs.Protocol.PROTOCOL_AUTH);
             RawSerializer.sendObject(socket.getOutputStream(), credentials);
             if(!RawSerializer.receiveBoolean(socket.getInputStream())){
