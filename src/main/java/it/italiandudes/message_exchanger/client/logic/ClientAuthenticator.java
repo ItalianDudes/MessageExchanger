@@ -25,19 +25,22 @@ public final class ClientAuthenticator {
         Socket socket;
         try {
             socket = new Socket(domain, port);
+            Logger.log("Connection established with "+domain+":"+port);
         }catch (Exception e) {
+            Logger.log(e);
             this.exception = e;
             result = false;
             return;
         }
         try {
-            Logger.log(credentials.toString());
             RawSerializer.sendString(socket.getOutputStream(), MessageExchanger.Defs.Protocol.PROTOCOL_AUTH);
             RawSerializer.sendObject(socket.getOutputStream(), credentials);
             if(!RawSerializer.receiveBoolean(socket.getInputStream())){
                 throw new Exception("Authentication Failed");
             }
+            Logger.log("Authentication successful");
         } catch (Exception e){
+            Logger.log(e);
             this.exception = e;
             result = false;
             return;
