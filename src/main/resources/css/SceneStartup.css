@@ -1,3 +1,23 @@
 .hbox {
     -fx-alignment: center;
 }
+
+#mainPane {
+    -fx-background-color: "#A754BB";
+}
+
+.label {
+    -fx-text-fill: "#FFF";
+    -fx-padding: 2 5 2 5;
+    -fx-background-radius: 2 2 2 2;
+}
+
+.button {
+    -fx-background-color: "#391143";
+    -fx-text-fill: "#FFF";
+}
+
+.button:hover {
+    -fx-background-color: "FFF";
+    -fx-text-fill: "#391143";
+}

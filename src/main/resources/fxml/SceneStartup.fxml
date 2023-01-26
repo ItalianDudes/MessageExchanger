@@ -4,47 +4,43 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            stylesheets="@../css/SceneStartup.css" xmlns="http://javafx.com/javafx/17.0.2-ea"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="it.italiandudes.message_exchanger.client.javafx.controller.ControllerSceneStartup">
-   <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
-               AnchorPane.topAnchor="0.0">
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="300.0" stylesheets="@../css/SceneStartup.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.italiandudes.message_exchanger.client.javafx.controller.ControllerSceneStartup">
+   <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <center>
          <VBox spacing="5.0" BorderPane.alignment="CENTER">
             <HBox styleClass="hbox">
                <Label text="Dominio:     ">
                   <font>
-                     <Font name="Calibri" size="12.0"/>
+                     <Font name="Calibri" size="12.0" />
                   </font>
                </Label>
                <TextField fx:id="domainField" focusTraversable="false" promptText="dominio:porta">
                   <font>
-                     <Font name="Calibri" size="12.0"/>
+                     <Font name="Calibri" size="12.0" />
                   </font>
                </TextField>
             </HBox>
             <HBox styleClass="hbox">
                <Label text="Username:  ">
                   <font>
-                     <Font name="Calibri" size="12.0"/>
+                     <Font name="Calibri" size="12.0" />
                   </font>
                </Label>
-               <TextField fx:id="usernameField" focusTraversable="false">
+               <TextField fx:id="usernameField" focusTraversable="false" promptText="username">
                   <font>
-                     <Font name="Calibri" size="12.0"/>
+                     <Font name="Calibri" size="12.0" />
                   </font>
                </TextField>
             </HBox>
             <HBox styleClass="hbox">
                <Label text="Password:   ">
                   <font>
-                     <Font name="Calibri" size="12.0"/>
+                     <Font name="Calibri" size="12.0" />
                   </font>
                </Label>
-               <PasswordField fx:id="passwordField" focusTraversable="false">
+               <PasswordField fx:id="passwordField" focusTraversable="false" promptText="password">
                   <font>
-                     <Font name="Calibri" size="12.0"/>
+                     <Font name="Calibri" size="12.0" />
                   </font>
                </PasswordField>
             </HBox>
@@ -53,23 +49,22 @@
       <top>
          <Label text="Message Viewer" textAlignment="CENTER" BorderPane.alignment="CENTER">
             <font>
-               <Font name="Calibri Bold" size="18.0"/>
+               <Font name="Calibri Bold" size="18.0" />
             </font>
             <BorderPane.margin>
-               <Insets bottom="10.0"/>
+               <Insets bottom="10.0" />
             </BorderPane.margin>
          </Label>
       </top>
       <bottom>
-         <Button focusTraversable="false" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                 onAction="#connectToServer" text="Connettiti" BorderPane.alignment="CENTER">
+         <Button focusTraversable="false" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#connectToServer" text="Connettiti" BorderPane.alignment="CENTER">
             <BorderPane.margin>
-               <Insets top="10.0"/>
+               <Insets top="10.0" />
             </BorderPane.margin>
          </Button>
       </bottom>
       <padding>
-         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
       </padding>
    </BorderPane>
 </AnchorPane>

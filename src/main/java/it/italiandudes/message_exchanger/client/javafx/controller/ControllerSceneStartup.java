@@ -13,12 +13,15 @@ import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 
+@SuppressWarnings("unused")
 public final class ControllerSceneStartup {
 
     //Attributes
 
     //Graphic Elements
+    @FXML private AnchorPane mainPane;
     @FXML private TextField domainField;
     @FXML private TextField usernameField;
     @FXML private PasswordField passwordField;

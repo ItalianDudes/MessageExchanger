@@ -32,6 +32,7 @@ public final class ControllerSceneMessageView {
     //EDT Methods
     @FXML
     private void getMessageFromServer(){
+        messageGetterButton.setDisable(true);
         Service<Void> messageGetterService = new Service<Void>() {
             @Override
             protected Task<Void> createTask() {
@@ -44,7 +45,7 @@ public final class ControllerSceneMessageView {
                             String message = PeerSerializer.receiveString(Client.getPeer());
                             Platform.runLater(() -> {
                                 messageArea.setText(message);
-                                messageGetterButton.setDisable(true);
+                                messageGetterButton.setDisable(false);
                             });
                         }catch (Exception e){
                             try{
