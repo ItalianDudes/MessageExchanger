@@ -1,0 +1,34 @@
+#messageArea {
+    -fx-background-color: "#460954";
+}
+
+#messageArea .content {
+    -fx-background-color: "#FFF";
+    -fx-text-fill: "#391143";
+}
+
+#mainPane {
+    -fx-background-color: "#A754BB";
+}
+
+.scroll-bar:vertical {
+    -fx-background-color: "#391143";
+    -fx-text-fill: "#FEF";
+}
+
+.label {
+    -fx-background-color: "#391143";
+    -fx-text-fill: "#FFF";
+    -fx-padding: 2 5 2 5;
+    -fx-background-radius: 2 2 2 2;
+}
+
+.button {
+    -fx-background-color: "#391143";
+    -fx-text-fill: "#FFF";
+}
+
+.button:hover {
+    -fx-background-color: "FFF";
+    -fx-text-fill: "#391143";
+}

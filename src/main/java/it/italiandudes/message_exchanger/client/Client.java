@@ -118,6 +118,7 @@ public final class Client extends Application {
         }
         return pwd;
     }
+
     //String validator for Username and Password
     @SuppressWarnings("BooleanMethodIsAlwaysInverted")
     private static boolean isStringValid(String str){

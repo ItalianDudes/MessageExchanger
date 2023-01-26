@@ -67,7 +67,7 @@ public final class AuthorizedUserList {
             while (inFile.hasNext()) {
                 String line = inFile.nextLine();
                 if (!line.equals("")) {
-                    String[] splitLine = line.split(";");
+                    String[] splitLine = line.split(",");
                     authUsers.add(new Credential(splitLine[0], splitLine[1], false));
                 }
             }
@@ -86,7 +86,7 @@ public final class AuthorizedUserList {
         }
         try{
             for(Credential credential : userList) {
-                outFile.append(credential.getUsername()).append(';').append(credential.getPassword()).append('\n');
+                outFile.append(credential.getUsername()).append(',').append(credential.getPassword()).append('\n');
             }
             outFile.flush();
             outFile.close();

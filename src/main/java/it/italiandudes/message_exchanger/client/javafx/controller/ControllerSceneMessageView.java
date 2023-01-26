@@ -11,12 +11,15 @@ import javafx.concurrent.Task;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+import javafx.scene.layout.AnchorPane;
 
+@SuppressWarnings("unused")
 public final class ControllerSceneMessageView {
 
     //Attributes
 
     //Graphic Elements
+    @FXML private AnchorPane mainPane;
     @FXML private TextArea messageArea;
     @FXML private Button messageGetterButton;
 
