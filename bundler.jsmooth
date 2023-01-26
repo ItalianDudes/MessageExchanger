@@ -17,26 +17,14 @@
 <maximumMemoryHeap>-1</maximumMemoryHeap>
 <maximumVersion>1.8.999</maximumVersion>
 <minimumVersion>1.8</minimumVersion>
-<skeletonName>Windowed Wrapper</skeletonName>
+<skeletonName>Console Wrapper</skeletonName>
 <skeletonProperties>
 <key>Message</key>
-<value>This program needs Java to run.
-Please download it at http://www.java.com</value>
+<value>This program needs Java 8 to run.
+Please download it at https://www.java.com/download</value>
 </skeletonProperties>
 <skeletonProperties>
-<key>URL</key>
-<value></value>
-</skeletonProperties>
-<skeletonProperties>
-<key>SingleProcess</key>
-<value>1</value>
-</skeletonProperties>
-<skeletonProperties>
-<key>SingleInstance</key>
-<value>0</value>
-</skeletonProperties>
-<skeletonProperties>
-<key>JniSmooth</key>
+<key>PressKey</key>
 <value>0</value>
 </skeletonProperties>
 <skeletonProperties>
