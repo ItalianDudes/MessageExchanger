@@ -9,10 +9,10 @@
 <arguments></arguments>
 <currentDirectory>${EXECUTABLEPATH}</currentDirectory>
 <embeddedJar>true</embeddedJar>
-<executableName>MessageExchanger-1.2R.exe</executableName>
+<executableName>MessageExchanger.exe</executableName>
 <iconLocation>app-logo.png</iconLocation>
 <initialMemoryHeap>-1</initialMemoryHeap>
-<jarLocation>MessageExchanger-1.2R.jar</jarLocation>
+<jarLocation>MessageExchanger.jar</jarLocation>
 <mainClassName>it.italiandudes.message_exchanger.MessageExchanger</mainClassName>
 <maximumMemoryHeap>-1</maximumMemoryHeap>
 <maximumVersion>1.8.999</maximumVersion>
