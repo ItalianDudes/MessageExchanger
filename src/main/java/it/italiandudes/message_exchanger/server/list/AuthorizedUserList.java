@@ -63,6 +63,8 @@ public final class AuthorizedUserList {
             return authUsers;
         }
 
+        inFile.nextLine(); //CSV Header Skipping
+
         try {
             while (inFile.hasNext()) {
                 String line = inFile.nextLine();
@@ -85,6 +87,7 @@ public final class AuthorizedUserList {
             return;
         }
         try{
+            outFile.append("username, sha512password\n");
             for(Credential credential : userList) {
                 outFile.append(credential.getUsername()).append(',').append(credential.getPassword()).append('\n');
             }
