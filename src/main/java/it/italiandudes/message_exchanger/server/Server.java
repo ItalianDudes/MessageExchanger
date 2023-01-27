@@ -75,8 +75,8 @@ public final class Server {
         }
 
         try{
-            outFile.append("port:").append(String.valueOf(port)).append('\n');
-            outFile.append("message:").append(message);
+            outFile.append("port::").append(String.valueOf(port)).append('\n');
+            outFile.append("message::").append(message);
             outFile.flush();
             outFile.close();
         }catch (IOException e){
@@ -104,12 +104,12 @@ public final class Server {
         }
         String line = inFile.nextLine();
         try {
-            port = Integer.parseInt(line.split(":")[1]);
+            port = Integer.parseInt(line.split("::")[1]);
         }catch (Exception e){
             Logger.log("Error during config file reading, will be used default port "+MessageExchanger.Defs.Server.DEFAULT_PORT);
             port = MessageExchanger.Defs.Server.DEFAULT_PORT;
         }
-        String[] messageComposed = inFile.nextLine().split(":");
+        String[] messageComposed = inFile.nextLine().split("::");
         StringBuilder msgBuilder = new StringBuilder();
         for(int i=1;i<messageComposed.length;i++){
             msgBuilder.append(messageComposed[i]);
